@@ -34,7 +34,7 @@
 - #color(@name) 字体颜色定义
 - #layout(@name) 布局样式编写（header banner）
 
-```
+```Less
 //将整体的结构定义放在一起
 #layout(@name) {
     & when(@name=header) {
@@ -63,7 +63,7 @@
 - #square(@w:10px) 设置相同宽高正方形
 - #line-height(@h) 高度和行高
 
-```
+```Less
 #radius(@radius: 50%) {
     border-radius: @radius;
 }
@@ -85,11 +85,11 @@
 ```
 
 ### 通用样式(.fl\.fr\.clearfix)
-- fl() 左浮
-- fr() 右浮
-- clearfix()清除浮动
+- .fl() 左浮
+- .fr() 右浮
+- .clearfix()清除浮动
 
-```
+```Less
 .clearfix(){
     &:after{
         content:'';
@@ -108,7 +108,7 @@
 定义重复的小模块的具体的样式，比如课程卡片列表中每个卡片的宽高、阴影、装饰
 - #course-box(@name)课程模块样式定义
 
-```
+```Less
 #course-box(@name){
     & when(@name=recommend){
         ......
@@ -122,7 +122,7 @@
 
 ### 根据模块结构写具体CSS细节
 小模块中的具体细节，比如课程卡片中子元素的具体样式
-```
+```Less
 .recommend {
     #layout(recommend);
     .recommend-course {
